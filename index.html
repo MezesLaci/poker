@@ -5,24 +5,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Poker</title>
-    <link rel="stylesheet" href="./card.css">
     <script src="./card.js" defer></script>
+    <style>
+        body{
+            display: flex;
+            flex-wrap: wrap;
+            gap:20px;
+            justify-content: center;
+        }
+        my-card{
+        display: block;
+        min-width: 500px;
+        max-width: 500px;
+    }
+    </style>
 </head>
 <body>
+<!--<my-card blue data-ertek="11" data-sign="3"></my-card>
+    <my-card green data-ertek="8" data-sign="1"></my-card>
+-->
+
+<!--
+    <my-card data-ertek="11" data-sign="3"></my-card>
+-->    
+ <!--
     <div class="card">
-<!-- ♥, ♦, ♣, ♠. -->
+ ♥, ♦, ♣, ♠.
         <div class="value">
             <div class="number">A</div>
             <div class="sign">♥</div>
         </div>
-
         <div class="sign">♥</div>
-
         <div class="value">
             <div class="number">A</div>
             <div class="sign">♥</div>
         </div>
-
     </div>
+-->   
+<script>
+    for (let j = 0; j < 4; j++) {
+        for (let i=1; i <14; i++){
+        let kartya = document.createElement('my-card');
+        kartya.dataset.ertek=i;
+        kartya.dataset.sign=j;
+        document.body.appendChild(kartya);
+    }
+
+    }
+    
+</script>
 </body>
 </html>
